@@ -1,0 +1,16 @@
+# Access to the data in this file is provided through EnvConfig - see env_config.rb
+
+defaults: &execution_defaults
+  default_config: dev #This just ensures the ft profile (below) is loaded if no CONFIG= is passed from the command line.
+
+dev:
+  <<: *execution_defaults
+  base_url: http://dev.nowpensions.com
+
+staging:
+  <<: *execution_defaults
+  base_url: http://staging.nowpensions.com
+
+live:
+  <<: *execution_defaults
+  base_url: http://www.nowpensions.com
