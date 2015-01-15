@@ -2,6 +2,22 @@ admin_login_page:
   admin_username: matter_admin
   admin_password: =phr*y4~R|;!|WM
 
+adviser_login_info:
+  email_field: daniel@nowpensions.com
+  password_field: p3nsions
+
+employer_login_info:
+  email_field: jamesb@nowpensions.com
+  password_field: p3nsions
+
+employee_login_info:
+  email_field: nick.caliari@nowpensions.com
+  password_field: p3nsions
+
+payroll_login_info:
+  email_field: anders@nowpensions.com
+  password_field: p3nsions
+
 
 
 

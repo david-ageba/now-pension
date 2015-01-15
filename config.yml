@@ -5,12 +5,12 @@ defaults: &execution_defaults
 
 dev:
   <<: *execution_defaults
-  base_url: http://dev.nowpensions.com
+  base_url: https://dev.nowpensions.com
 
 staging:
   <<: *execution_defaults
-  base_url: http://staging.nowpensions.com
+  base_url: https://staging.nowpensions.com
 
 live:
   <<: *execution_defaults
-  base_url: http://www.nowpensions.com
+  base_url: https://www.nowpensions.com
