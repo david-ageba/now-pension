@@ -1,3 +1,7 @@
+Given(/^I go to nowpensions\.com homepage$/) do
+  visit(HomePage)
+end
+
 And(/^I click on Login link$/) do
   on(HomePage).loginLink
 end
