@@ -1,5 +1,5 @@
 And(/^I click on the magnifier icon$/) do
-  pending
+  #pending
 end
 
 When(/^I type "([^"]*)" into the search field$/) do |arg|

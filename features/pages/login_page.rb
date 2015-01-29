@@ -14,7 +14,7 @@ class LoginPage
     case user_role
       when 'Employer'
         populate_page_with data_for(:employer_login_info, data)
-      when 'Employee'
+      when 'NPM'
         populate_page_with data_for(:employee_login_info, data)
       when 'Adviser'
         populate_page_with data_for(:adviser_login_info, data)
