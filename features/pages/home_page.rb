@@ -14,4 +14,12 @@ class HomePage
   link :help_centre, text: 'Help Centre'
   link :employers, text: 'Employers'
 
+  link :employer_button, text: 'Employer'
+  link :employee_button, text: 'Employee'
+  link :adviser_button, text: 'Adviser'
+  link :payroll_bureau_button, text: 'Payroll Bureau'
+
+  h3 :homepage_heading, id: 'osu_lead_heading'
+  link :help_centre_button, css: 'ul#osu_lead_secondary li:nth-child(2) a'
+
 end

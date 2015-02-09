@@ -21,7 +21,7 @@ Feature: Nowpensions Login functionality with different user roles.
     And I click on Login link
     When I complete my "NPM" user email and password
     And I click Login
-    Then I will be redirected to the Help Centre for NPM users
+    Then I will be redirected to the Help Centre for Employees
 
   Scenario: Login with Payroll user role
     Given I go to nowpensions.com homepage

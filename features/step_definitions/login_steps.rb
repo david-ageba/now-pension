@@ -19,11 +19,11 @@ Then(/^I will be redirected to the Help Centre for Advisers$/) do
 end
 
 Then(/^I will be redirected to the Help Centre for Employers$/) do
-  expect(@browser.text.include?("Employer Help Centre")).to be true
+  expect(@browser.text.include?("Help Centre for Employers")).to be true
 end
 
-Then(/^I will be redirected to the Help Centre for NPM users/) do
-  expect(@browser.text.include?("Help Centre for NPMs")).to be true
+Then(/^I will be redirected to the Help Centre for Employees/) do
+  expect(@browser.text.include?("Help Centre for Employees")).to be true
 end
 
 Then(/^I will be redirected to the Help Centre for Payroll users$/) do
