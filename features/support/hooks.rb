@@ -8,9 +8,10 @@ browser = Watir::Browser.new(b.to_sym)
 
 Before('~@headless', '~@manual') do
   @browser = browser
-  browser.window.resize_to(1920, 1080)
+  browser.window.maximize
   #resize_to(1300, 600)
   browser.cookies.clear
+  browser.driver.manage.timeouts.implicit_wait = 60
 end
 
 # After each scenario, except headless and manual ones

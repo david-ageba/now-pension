@@ -12,6 +12,7 @@ When(/^I click on ([^"]*) button$/) do |button_name|
 end
 
 Then(/^I should see the ([^"]*) landing page$/) do |landing_page|
+  @browser.wait(5)
   case landing_page
     when "Employer"
       expect(@browser.text.include?("All employers and employees are welcome")).to be true
@@ -25,7 +26,16 @@ Then(/^I should see the ([^"]*) landing page$/) do |landing_page|
 end
 
 And(/^a cookie with ([^"]*) user role should be set in my browser$/) do |user_role|
-  puts @browser.cookies[:osu_user_role].key(:value)
+  case user_role
+    when "Employer"
+      expect(@browser.cookies[:osu_user_role][:value] == 'company').to be true
+    when "Employee"
+      expect(@browser.cookies[:osu_user_role][:value] == 'employee').to be true
+    when "Adviser"
+      expect(@browser.cookies[:osu_user_role][:value] == 'ifa').to be true
+    when "Payroll Bureau"
+      expect(@browser.cookies[:osu_user_role][:value] == 'payroll').to be true
+  end
 end
 
 When(/^I click on the Help Centre circle$/) do
