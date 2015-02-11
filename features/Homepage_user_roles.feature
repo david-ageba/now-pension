@@ -1,5 +1,3 @@
-@jenkins
-
 Feature: Nowpensions homepage user roles set by cookie.
 
   Scenario: Employer role set by cookie

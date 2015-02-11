@@ -1,5 +1,3 @@
-@jenkins
-
 Feature: Nowpensions Login functionality with different user roles.
 
   Scenario: Login with Adviser user role
