@@ -17,3 +17,48 @@ employee_login_info:
 payroll_login_info:
   email_field: anders@nowpensions.com
   password_field: p3nsions
+
+employer_registration_info:
+  first_name: Automation
+  last_name: Test
+  email: jenkins@experiencematter.co.uk
+  repeat_email: jenkins@experiencematter.co.uk
+  password: 12345678
+  repeat_password: 12345678
+  organisation: JenkinsTesting Inc
+  phone_number: 12345678
+  job_title: QA Engineer
+
+adviser_registration_info:
+  first_name: Automation
+  last_name: Test
+  email: jenkins@experiencematter.co.uk
+  repeat_email: jenkins@experiencematter.co.uk
+  password: 12345678
+  repeat_password: 12345678
+  organisation: JenkinsTesting Inc
+  phone_number: 12345678
+  job_title: QA Engineer
+  fca_number: 22113344
+  branch_postcode: NW1 2FD
+
+payroll_registration_info:
+  first_name: Automation
+  last_name: Test
+  email: jenkins@experiencematter.co.uk
+  repeat_email: jenkins@experiencematter.co.uk
+  microsite_email: jenkins@experiencematter.co.uk
+  password: 12345678
+  repeat_password: 12345678
+  organisation: JenkinsTesting Inc
+  phone_number: 12345678
+  job_title: QA Engineer
+  reg_number: 11223344
+  address_line1: 40 Melton Street
+  postcode: NW1 2FD
+  payroll_software: Accentra
+  setup_on_microsite: true
+  perform_ae_assessment: true
+  er_data_to_microsite: true
+  update_payroll: true
+  forward_ddm: true

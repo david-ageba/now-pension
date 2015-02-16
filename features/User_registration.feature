@@ -5,7 +5,7 @@ Feature: Nowpensions User registration
     Given my email inbox is empty
     And the test user doesn't exist in the database
     And I go to nowpensions.com homepage
-    And I click on Login
+    And I click on Login link
     And I click Register here
 
   Scenario: Employer registration flow

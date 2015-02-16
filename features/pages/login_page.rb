@@ -10,6 +10,8 @@ class LoginPage
   text_field :password_field, id: 'osupassword'
   button :loginButton, name: 'osu-widget'
   select :register_here, id: 'osu_login_signup'
+  text_field :first_name, name: "osu_user[first_name]"
+
 
   def input_user(user_role, data = {})
     case user_role
@@ -21,6 +23,23 @@ class LoginPage
         populate_page_with data_for(:adviser_login_info, data)
       when 'Payroll'
         populate_page_with data_for(:payroll_login_info, data)
+    end
+  end
+
+  def show_hidden_select
+    script = "return arguments[0].style = 'display:true'"
+    hidden_select = browser.select(id: 'osu_login_signup')
+    browser.execute_script(script, hidden_select)
+  end
+
+  def select_registration(user_role)
+    case user_role
+      when 'Employer registration'
+        browser.goto "#{EnvConfig["base_url"]}/employers/register"
+      when 'Adviser registration'
+        browser.goto "#{EnvConfig["base_url"]}/adviser/register"
+      when 'Payroll bureau registration'
+        browser.goto "#{EnvConfig["base_url"]}/payroll"
     end
   end
 
