@@ -10,7 +10,7 @@ class ResetPasswordPage
   div :login_form, css: "div.nine"
 
   def setRandomEmail
-    self.reset_pass_email = "#{Utility.getRandomString(10)}@example.com"
+    self.reset_pass_email = "#{Utility.get_random_string(10)}@example.com"
   end
 
 

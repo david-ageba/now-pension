@@ -4,6 +4,8 @@ defaults: &execution_defaults
   default_config: dev #This just ensures the dev profile (below) is loaded if no CONFIG= is passed from the command line.
   gmail_username: "jenkins@experiencematter.co.uk"
   gmail_password: "!J3nk1n5"
+  admin_username: "Matter_Admin"
+  admin_password: "=phr*y4~R|;!|WM"
 
 dev:
   <<: *execution_defaults

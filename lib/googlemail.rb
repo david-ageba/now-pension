@@ -1,11 +1,13 @@
 module GoogleMail
-  require 'gmail'
   module_function
+  require 'gmail'
 
-#  @login = Gmail.new(EnvConfig["gmail_username"], EnvConfig["gmail_password"])
+  def initialize
+    Gmail.new(EnvConfig["gmail_username"], EnvConfig["gmail_password"])
+  end
 
   def delete_all_emails
-    gmail = @login
+    gmail = initialize
     gmail.inbox.emails.each do |email|
       email.delete!
     end
@@ -13,7 +15,7 @@ module GoogleMail
   end
 
   def get_last_unread_mail
-    gmail = Gmail.new('kisbeniamin', 'kx247822')
+    gmail = initialize
     if gmail.inbox.count(:unread) == 0
       puts 'No new email was found'
     else
@@ -21,5 +23,11 @@ module GoogleMail
       lastmail = index-1
       mailtext = gmail.inbox.emails[lastmail].message.body.to_s
     end
+    gmail.logout
+  end
+
+  def get_last_mail_text_with_subject(subject)
+    gmail = initialize
+
   end
 end

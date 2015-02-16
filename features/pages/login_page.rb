@@ -9,6 +9,7 @@ class LoginPage
   text_field :email_field, id: 'osuemail'
   text_field :password_field, id: 'osupassword'
   button :loginButton, name: 'osu-widget'
+  select :register_here, id: 'osu_login_signup'
 
   def input_user(user_role, data = {})
     case user_role
