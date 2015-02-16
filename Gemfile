@@ -10,6 +10,7 @@ gem "savon", "~>1.2.0"
 gem 'rubocop', '0.21.0'
 gem 'headless', '1.0.1'
 gem 'syntax'
+gem 'ruby-gmail'
 # gem 'minitest'
 
 # The following gems are required to run the rake tasks in command line

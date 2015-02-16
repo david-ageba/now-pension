@@ -22,4 +22,8 @@ class HomePage
   h3 :homepage_heading, id: 'osu_lead_heading'
   link :help_centre_button, css: 'ul#osu_lead_secondary li:nth-child(2) a'
 
+  def getmail
+    puts GoogleMail.get_last_unread_mail
+  end
+
 end

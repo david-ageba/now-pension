@@ -1,7 +1,9 @@
 # Access to the data in this file is provided through EnvConfig - see env_config.rb
 
 defaults: &execution_defaults
-  default_config: dev #This just ensures the ft profile (below) is loaded if no CONFIG= is passed from the command line.
+  default_config: dev #This just ensures the dev profile (below) is loaded if no CONFIG= is passed from the command line.
+  gmail_username: "jenkins@experiencematter.co.uk"
+  gmail_password: "!J3nk1n5"
 
 dev:
   <<: *execution_defaults
