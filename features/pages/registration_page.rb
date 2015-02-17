@@ -33,6 +33,10 @@ class RegistrationPage
   button :register, name: "osu-widget"
   link :get_started, css: "a.button--large"
 
+  element :step_one_completed, :section, class: "journey__step journey__step--one journey__step--active journey__step--check"
+  element :step_one_completed, :section, class: "journey__step journey__step--two journey__step--active journey__step--check"
+  link :login_button, css: "section.journey__step--two a"
+
   def complete_registration_info(user_role, data = {})
     case user_role
       when 'Employer'

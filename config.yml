@@ -6,6 +6,8 @@ defaults: &execution_defaults
   gmail_password: "!J3nk1n5"
   admin_username: "Matter_Admin"
   admin_password: "=phr*y4~R|;!|WM"
+  registered_username: "jenkins@experiencematter.co.uk"
+  registered_password: "12345678"
 
 dev:
   <<: *execution_defaults

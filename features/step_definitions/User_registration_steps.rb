@@ -19,31 +19,31 @@ And(/^I complete my Employer information$/) do
 end
 
 And(/^I click Register$/) do
-#  on(RegistrationPage).register
+  on(RegistrationPage).register
 end
 
 Then(/^I should receive an email with a confirmation link in it$/) do
-  pending
+  @link = (GoogleMail.get_last_mail_text_with_subject "Thanks for Registering with NOW: Pensions").split("https://")[1].split("\">/n/n")[0]
 end
 
 When(/^I access that link$/) do
-  pending
+  @browser.goto "http://#{@link}"
 end
 
 Then(/^the first step of the journey is completed$/) do
-  pending
+  expect(on(RegistrationPage).step_one_completed?).to be true
 end
 
 And(/^I am asked to login$/) do
-  pending
+  expect(on(RegistrationPage).step_one_completed.text.include?("Login to your NOW: Pensions account"))
 end
 
 And(/^I fill in my email and password$/) do
-  pending
+  on(LoginPage).complete_login_info EnvConfig["registered_username"], EnvConfig["registered_password"]
 end
 
 Then(/^the second step of the journey is completed$/) do
-  pending
+  expect(on(RegistrationPage).step_two_completed?).to be true
 end
 
 When(/^I click Adviser Registration$/) do
@@ -64,4 +64,8 @@ end
 
 And(/^I complete my Payroll information$/) do
   on(RegistrationPage).complete_registration_info "Payroll"
+end
+
+And(/^I click on Login$/) do
+  on(RegistrationPage).login_button
 end

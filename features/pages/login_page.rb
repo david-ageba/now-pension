@@ -26,6 +26,11 @@ class LoginPage
     end
   end
 
+  def complete_login_info(username, password)
+    self.email_field = username
+    self.password_field = password
+  end
+
   def show_hidden_select
     script = "return arguments[0].style = 'display:true'"
     hidden_select = browser.select(id: 'osu_login_signup')
