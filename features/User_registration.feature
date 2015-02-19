@@ -1,4 +1,3 @@
-#@wip
 Feature: Nowpensions User registration
 
   Background: Get to the registration page

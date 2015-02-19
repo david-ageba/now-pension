@@ -8,4 +8,12 @@ module Utility
     string
   end
 
+  def validate_date_format(date_format, date_string)
+    begin
+      Date.strptime(date_format, date_string)
+    rescue ArgumentError
+      fail("String parsing to date format error")
+    end
+  end
+
 end
