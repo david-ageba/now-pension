@@ -35,7 +35,7 @@ Then(/^the first step of the journey is completed$/) do
 end
 
 And(/^I am asked to login$/) do
-  expect(on(RegistrationPage).step_one_completed.text.include?("Login to your NOW: Pensions account"))
+  expect(on(RegistrationPage).step_one_completed.include?("Login to your NOW: Pensions account"))
 end
 
 And(/^I fill in my email and password$/) do
