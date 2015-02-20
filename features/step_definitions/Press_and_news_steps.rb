@@ -19,7 +19,7 @@ When(/^I click on the first press release$/) do
 end
 
 Then(/^I will see the press release's publishing date$/) do
-  Utility.validate_date_format "%d %m %y", on(PressReleasesPage).publish_date
+  Utility.validate_date_format "%B %d, %Y", on(PressReleasesPage).publish_date
 end
 
 And(/^a "Print this page" button$/) do
@@ -70,7 +70,7 @@ When(/^I click on the first News article$/) do
 end
 
 Then(/^I will see the News' publishing date$/) do
-  Utility.validate_date_format "%d %m %y", on(PressReleasesPage).publish_date
+  Utility.validate_date_format "%B %d, %Y", on(PressReleasesPage).publish_date
 end
 
 And(/^a "View all news" button$/) do

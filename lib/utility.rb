@@ -10,9 +10,9 @@ module Utility
 
   def validate_date_format(date_format, date_string)
     begin
-      Date.strptime(date_format, date_string)
+      Date.strptime(date_string, date_format)
     rescue ArgumentError
-      fail("String parsing to date format error")
+      fail("Incorrect date format. Expected: #{Date.parse(date_string).strftime(date_format)}, Found: #{date_string}")
     end
   end
 

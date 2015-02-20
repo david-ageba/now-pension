@@ -1,4 +1,4 @@
-@wip
+#@wip
 Feature: Nowpensions Press and News
   Background:
     Given I go to nowpensions.com homepage
