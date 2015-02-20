@@ -5,7 +5,7 @@ class ResetPasswordPage
 
   page_url "#{EnvConfig["base_url"]}/login/#reset"
 
-  text_field :reset_pass_email, css: "div#osu-reset-form div input#osuemail"
+  text_field :reset_pass_email, id: "osuemail_reset"
   button :reset_pass_button, css: "#osu-reset-form form div.osu-widget-buttons button"
   div :login_form, css: "div.nine"
 
