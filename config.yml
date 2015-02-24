@@ -8,6 +8,10 @@ defaults: &execution_defaults
   admin_password: "=phr*y4~R|;!|WM"
   registered_username: "jenkins@experiencematter.co.uk"
   registered_password: "12345678"
+  adviser_username: jenkins+adviser@experiencematter.co.uk
+  adviser_password: 12345678
+  employer_username: jenkins+employer@experiencematter.co.uk
+  employer_password: 12345678
 
 dev:
   <<: *execution_defaults

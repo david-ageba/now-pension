@@ -1,4 +1,4 @@
-Feature: Nowpensions homepage user roles set by cookie.
+Feature: Nowpensions homepage user role set by cookie.
 
   Scenario: Employer role set by cookie
     Given I go to nowpensions.com homepage

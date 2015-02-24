@@ -1,12 +1,5 @@
 Feature: Nowpensions Search functionality.
 
-  Scenario: Global search from the homepage
-    Given I go to nowpensions.com homepage
-    And I click on the magnifier icon
-    When I type "employer" into the search field
-    And I press Enter
-    Then I should see a page with search results
-
   Scenario: Help centre instant search
     Given I go to nowpensions.com homepage
     And I click on the Help Centre link
