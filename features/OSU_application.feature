@@ -1,10 +1,10 @@
-@wip
 Feature: Nowpensions OSU User application
 
   Scenario: Start new application as an Adviser
     Given I go to nowpensions.com homepage
     And I am logged in with my "Adviser" account
     When I click Start a new application
+    And I click on Continue button of the welcome page
     Then I am at the first step of my application
     And I choose No
     Then I can save my application, or Continue
@@ -43,6 +43,7 @@ Feature: Nowpensions OSU User application
     And I confirm my action
     Then the following message is displayed: "Application deleted"
 
+  @wip
   Scenario: Start application as an Employer
     Given I don't have any application registered for my account
     And I go to nowpensions.com homepage
@@ -54,6 +55,7 @@ Feature: Nowpensions OSU User application
     Then the following message is diaplayed: "Form saved"
     And I click Logout
 
+  @wip
   Scenario: Continue an uncompleted application as an Employer
     Given I go to nowpensions.com homepage
     And I am logged in with my "Employer" account

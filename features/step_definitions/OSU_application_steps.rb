@@ -1,4 +1,5 @@
 And(/^I am logged in with my "([^"]*)" account$/) do |account_type|
+  on(HomePage).loginLink
   case account_type
     when 'Adviser'
       on(LoginPage).login_with EnvConfig["adviser_username"], EnvConfig["adviser_password"]
@@ -58,47 +59,50 @@ And(/^I choose Plan 101$/) do
 end
 
 And(/^I complete all the mandatory info$/) do
-  pending
+  on(ApplicationPage).complete_adviser_application
 end
 
 Then(/^I will see a Draft of the participation agreement$/) do
-  pending
+  expect(@browser.text.include? "Please take a look at the draft agreement below.").to be true
 end
 
 And(/^I can download the agreement, or I can see my plan summary, or I can Continue$/) do
-  pending
+  expect(on(ApplicationPage).see_plan_summary?).to be true
+  expect(on(ApplicationPage).download_draft_agreement?).to be true
+  expect(on(ApplicationPage).continue?).to be true
 end
 
-Then(/^a "([^"]*)" modal is displayed$/) do |arg|
-  pending
+Then(/^a "Share this page" modal is displayed$/) do
+  sleep 1
+  expect(on(ApplicationPage).share_this_page_element.visible?).to be true
 end
 
 And(/^I click on Send$/) do
-  pending
+  on(ApplicationPage).send_button
 end
 
 And(/^my contact should receive an email with a link$/) do
-  pending
+  @link = (GoogleMail.get_last_mail_text_with_subject "Please authorise the NOW: Pensions Application Form for Employer").split("https://")[1].split("\">/n/n")[0]
 end
 
 And(/^I go to that link$/) do
-  pending
+  @browser.goto "http://#{@link}"
 end
 
 And(/^I complete the required info in the modal$/) do
-  pending
+  on(ApplicationPage).modal_confirmation
 end
 
 When(/^I click on Delete link$/) do
-  pending
+  on(ApplicationPage).delete_link
 end
 
 And(/^I confirm my action$/) do
-  pending
+  @browser.alert.ok
 end
 
-Then(/^the following message is displayed: "([^"]*)"$/) do |arg|
-  pending
+Then(/^the following message is displayed: "([^"]*)"$/) do |message|
+  expect(@browser.text.include? message).to be true
 end
 
 Given(/^I don't have any application registered for my account$/) do
@@ -123,4 +127,8 @@ end
 
 And(/^the third step of the journey is completed$/) do
   pending
+end
+
+And(/^I click on Continue button of the welcome page$/) do
+  on(ApplicationPage).continue_link
 end

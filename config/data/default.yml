@@ -62,3 +62,27 @@ payroll_registration_info:
   er_data_to_microsite: true
   update_payroll: true
   forward_ddm: true
+
+adviser_application:
+  employer_name_legal: Employer
+  employer_name_known: Employer
+  staging_date: 1st February 2021
+  plan_start_date_no: true
+  organization_description: Public Limited Company
+  company_reg_number: 12345
+  company_address: Address
+  company_city: London
+  company_postcode: W2 4RH
+  no_of_included_employees: 6-10
+  primary_contact_name: Contact Name
+  primary_contact_email: jenkins+contact@experiencematter.co.uk
+  primary_contact_email2: jenkins+contact@experiencematter.co.uk
+  primary_contact_job: qa
+  primary_contact_phone: 12345678
+  paye_reference: 045/AB680
+  payroll_known_as: Organization
+  payroll_contact_name: Contact
+  payroll_contact_email: jenkins+payrollcontact@experiencematter.co.uk
+  payroll_contact_email2: jenkins+payrollcontact@experiencematter.co.uk
+  payroll_contact_phone: 12345678
+  payroll_software_provider: Accentra
