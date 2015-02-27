@@ -10,7 +10,8 @@ class LoginPage
   text_field :password_field, id: 'osupassword'
   button :loginButton, name: 'osu-widget'
   select :register_here, id: 'osu_login_signup'
-  text_field :first_name, name: "osu_user[first_name]"
+  text_field :first_name, name: 'osu_user[first_name]'
+  link :logoutLink, text: 'Logout'
 
 
   def input_user(user_role, data = {})
