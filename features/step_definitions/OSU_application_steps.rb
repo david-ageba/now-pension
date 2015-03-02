@@ -82,11 +82,12 @@ And(/^I click on Send$/) do
 end
 
 And(/^my contact should receive an email with a link$/) do
-  @link = (GoogleMail.get_last_mail_text_with_subject "Please authorise the NOW: Pensions Application Form for Employer").split("https://")[1].split("\">/n/n")[0]
+  @link = (GoogleMail.get_last_mail_text_with_subject "Please authorise the NOW: Pensions Application Form for Employer").split("underline;\" href=\"")[1].split("\">http")[0]
+  puts @link
 end
 
 And(/^I go to that link$/) do
-  @browser.goto "http://#{@link}"
+  @browser.goto @link
 end
 
 And(/^I complete the required info in the modal$/) do
@@ -114,19 +115,19 @@ When(/^I click Start application$/) do
 end
 
 When(/^I click on Continue application$/) do
-  pending
+  on(ApplicationPage).continue_application
 end
 
 And(/^I complete the required Employer information$/) do
-  pending
+  on(ApplicationPage).complete_employer_application
 end
 
 And(/^I complete the required PAYE information$/) do
-  pending
+  on(ApplicationPage).complete_paye_info
 end
 
 And(/^the third step of the journey is completed$/) do
-  pending
+  expect(on(RegistrationPage).step_three_completed?).to be true
 end
 
 And(/^I click on Continue button of the welcome page$/) do

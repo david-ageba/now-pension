@@ -10,6 +10,7 @@ class ApplicationPage
   button :choose_101_plan, css: "div.link.\\31 01 button"
   link :start_new_application, text: "Start a new application"
   link :manage_applications, text: "Manage applications"
+  link :continue_application, text: "Continue Application"
   link :continue_link, text: "Continue"
   link :delete_link, text: "Delete"
   list_item :first_step_active, css: "ul.osu-steps li:nth-child(1).osu-steps--active"
@@ -58,11 +59,23 @@ class ApplicationPage
   text_field :accepted_email2, id: "accepted-by-email-confirm-0"
   button :accepted_continue, id: "signatory-continue"
   checkbox :accepted_i_apply, id: "acceptance-checkbox"
-  link :accepted_final_continue, css: "div.dialog-stage div.osu-buttons a"
+  link :accepted_final_continue, id: "final-acceptance"
 
 
   def complete_adviser_application(data = {})
     populate_page_with data_for(:adviser_application, data)
+  end
+
+  def complete_employer_application(data = {})
+    populate_page_with data_for(:employer_application, data)
+  end
+
+  def complete_paye_info(data = {})
+    populate_page_with data_for(:employer_application_paye, data)
+  end
+
+  def delete_employer_applications
+    # TODO: to be continued...
   end
 
   def modal_confirmation

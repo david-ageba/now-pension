@@ -35,6 +35,7 @@ class RegistrationPage
 
   element :step_one_completed, :section, xpath: "//section[@class='journey__step journey__step--one journey__step--active journey__step--check']"
   element :step_two_completed, :section, xpath: "//section[@class='journey__step journey__step--two journey__step--active journey__step--check']"
+  element :step_three_completed, :section, xpath: "//section[@class='journey__step journey__step--three journey__step--active journey__step--check']"
   link :login_button, css: "section.journey__step--two a"
 
   def complete_registration_info(user_role, data = {})

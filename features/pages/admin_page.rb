@@ -24,4 +24,9 @@ class AdminPage
     delete_user unless self.osu_users_element.text.include?('No matching records found')
     browser.cookies.clear
   end
+
+  def delete_employer_applications(username)
+    login
+
+  end
 end
