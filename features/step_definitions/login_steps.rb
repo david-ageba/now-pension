@@ -47,7 +47,7 @@ Then(/^I will see the error message: "([^"]*)"$/) do |message|
 end
 
 And(/^I will not be logged in$/) do
-  expect(on(LoginPage).logoutLink?).to be false
+  expect(on(LoginPage).email_field?).to be true
 end
 
 But(/^I enter a bad password$/) do

@@ -45,7 +45,7 @@ module GoogleMail
         end
         puts "sec = #{sec}"
       end
-      fail('Mail not sent within 60 seconds') if sec == 60
+      fail('Mail not sent within 60 seconds') if sec > 60
     end
     lastmail = gmail.inbox.emails(:subject => email_subject).count - 1
     lastmail_text = gmail.inbox.emails(:subject => email_subject)[lastmail].message.body.to_s
