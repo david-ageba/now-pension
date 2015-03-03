@@ -19,7 +19,7 @@ And(/^I click on the Help Centre link$/) do
   on(HomePage).help_centre
 end
 
-When(/^I type "([^"]*)" into the search field on the bottom of the page$/) do |text|
+When(/^I type "([^"]*)" into the search field on the top of the page$/) do |text|
   on(HelpCentrePage).bottom_search = text
 end
 

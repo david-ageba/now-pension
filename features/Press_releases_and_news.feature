@@ -1,4 +1,3 @@
-#@wip
 Feature: Nowpensions Press and News
   Background:
     Given I go to nowpensions.com homepage
@@ -68,7 +67,7 @@ Feature: Nowpensions Press and News
     When I click on the "Copy this page link" button
     Then the clipboard should contain the link of the press release
 
-  ########## Same test scenarios with logged in user
+  # Same test scenarios with logged in user
   Scenario: As a logged in user I want to be able to see a list of the Nowpensions press releases
     And I click on Login link
     And I complete my "Adviser" user email and password

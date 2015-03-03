@@ -96,9 +96,6 @@ end
 
 When(/^I click on Delete link$/) do
   on(ApplicationPage).delete_link
-end
-
-And(/^I confirm my action$/) do
   @browser.alert.ok
 end
 
@@ -107,11 +104,12 @@ Then(/^the following message is displayed: "([^"]*)"$/) do |message|
 end
 
 Given(/^I don't have any application registered for my account$/) do
-  pending
+  @browser.cookies.clear
+  visit(AdminPage).delete_employer_applications EnvConfig["employer_username"]
 end
 
 When(/^I click Start application$/) do
-  pending
+  on(ApplicationPage).start_employer_application
 end
 
 When(/^I click on Continue application$/) do

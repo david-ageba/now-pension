@@ -11,6 +11,7 @@ class ApplicationPage
   link :start_new_application, text: "Start a new application"
   link :manage_applications, text: "Manage applications"
   link :continue_application, text: "Continue Application"
+  link :start_employer_application, text: "Start Application"
   link :continue_link, text: "Continue"
   link :delete_link, text: "Delete"
   list_item :first_step_active, css: "ul.osu-steps li:nth-child(1).osu-steps--active"
@@ -22,6 +23,7 @@ class ApplicationPage
   radio_button :step1_no, id: "has_bureau-1"
   table :active_applications_table, css: "div#primary table"
 
+  button :accept_duplicate_app, css: "button.osu-yes"
   text_field :employer_name_legal, id: "company_name_legal"
   text_field :employer_name_known, id: "company_name_aka"
   select_list :staging_date, id: "staging_date"
@@ -66,16 +68,28 @@ class ApplicationPage
     populate_page_with data_for(:adviser_application, data)
   end
 
-  def complete_employer_application(data = {})
-    populate_page_with data_for(:employer_application, data)
+  def complete_employer_application
+    self.employer_name_legal = 'Employer'
+    self.employer_name_known = 'Employer'
+    self.staging_date = '1st February 2021'
+    self.select_plan_start_date_no
+
+    self.organization_description = 'Public Limited Company'
+    self.company_reg_number = '12345'
+    accept_duplicate_app
+    self.company_address = 'Address'
+    self.company_city = 'London'
+    self.company_postcode = 'W2 4RH'
+    self.no_of_included_employees = '6-10'
+    self.primary_contact_name = 'Contact Name'
+    self.primary_contact_email = 'jenkins+contact@experiencematter.co.uk'
+    self.primary_contact_email2 = 'jenkins+contact@experiencematter.co.uk'
+    self.primary_contact_job = 'qa'
+    self.primary_contact_phone = '12345678'
   end
 
   def complete_paye_info(data = {})
     populate_page_with data_for(:employer_application_paye, data)
-  end
-
-  def delete_employer_applications
-    # TODO: to be continued...
   end
 
   def modal_confirmation
