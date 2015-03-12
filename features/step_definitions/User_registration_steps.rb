@@ -23,11 +23,11 @@ And(/^I click Register$/) do
 end
 
 Then(/^I should receive an email with a confirmation link in it$/) do
-  @link = (GoogleMail.get_last_mail_text_with_subject "Thanks for Registering with NOW: Pensions").split("<a href=\"https://")[1].split("\" title=\"Start the Application\"")[0]
+  @link = (GoogleMail.get_last_mail_text_with_subject "Thanks for Registering with NOW: Pensions").split("underline;\" href=\"")[1].split("\" title=\"Start the Application\"")[0]
 end
 
 When(/^I access that link$/) do
-  @browser.goto "http://#{@link}"
+  @browser.goto @link
 end
 
 Then(/^the first step of the journey is completed$/) do
@@ -68,4 +68,13 @@ end
 
 And(/^I click on Login$/) do
   on(RegistrationPage).login_button
+end
+
+And(/^I click on Register$/) do
+  on(RegistrationPage).payroll_register_button
+end
+
+And(/^I confirm$/) do
+  sleep 2
+  on(RegistrationPage).confirm_yes
 end

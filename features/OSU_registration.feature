@@ -33,12 +33,15 @@ Feature: Nowpensions User registration
     When I click Login
     Then I will be redirected to the Help Centre for Advisers
 
+    @wip
   Scenario: Payroll Bureaux registration flow
     When I click Payroll bureau registration
     Then I should see the Payroll Bureau landing page
     When I click Get started button
+    And I click on Register
     And I complete my Payroll information
     And I click Register
+    And I confirm
     Then I should receive an email with a confirmation link in it
     When I access that link
     Then the first step of the journey is completed

@@ -22,6 +22,7 @@ class RegistrationPage
   # payroll bureau fields
   text_field :reg_number, name: "osu_user[bureau-reg-no]"
   text_field :address_line1, name: "osu_user[bureau-address-1]"
+  text_field :payroll_city, id: "osubureau-address-city"
   text_field :postcode, name: "osu_user[bureau-address-postcode]"
   select :payroll_software, id: "bureau-payroll-software"
   checkbox :setup_on_microsite, id: "osubureau-setup-on-microsite"
@@ -37,6 +38,8 @@ class RegistrationPage
   element :step_two_completed, :section, xpath: "//section[@class='journey__step journey__step--two journey__step--active journey__step--check']"
   element :step_three_completed, :section, xpath: "//section[@class='journey__step journey__step--three journey__step--active journey__step--check']"
   link :login_button, css: "section.journey__step--two a"
+  link :payroll_register_button, text: "Register"
+  button :confirm_yes, css: "div#ae-comms-yes-modal button.confirm-yes"
 
   def complete_registration_info(user_role, data = {})
     case user_role
@@ -45,6 +48,9 @@ class RegistrationPage
       when 'Adviser'
         populate_page_with data_for(:adviser_registration_info, data)
       when 'Payroll'
+        script = "return arguments[0].style = 'display:true'"
+        hidden_select = browser.select(id: "bureau-payroll-software")
+        browser.execute_script(script, hidden_select)
         populate_page_with data_for(:payroll_registration_info, data)
     end
   end

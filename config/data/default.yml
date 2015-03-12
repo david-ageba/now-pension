@@ -55,6 +55,7 @@ payroll_registration_info:
   job_title: QA Engineer
   reg_number: 11223344
   address_line1: 40 Melton Street
+  payroll_city: London
   postcode: NW1 2FD
   payroll_software: Accentra
   setup_on_microsite: true
