@@ -13,7 +13,7 @@ Feature: Nowpensions OSU User application
     Then the following message is diaplayed: "Form saved"
     And I click Logout
 
-  Scenario: Continue an uncompleted application as an Adviser
+  Scenario: Continue an uncmpleted application as an Adviser
     Given my email inbox is empty
     And I go to nowpensions.com homepage
     And I am logged in with my "Adviser" account

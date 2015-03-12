@@ -49,8 +49,8 @@ Run 'rubocop' to check that your ruby code conforms to the styleguide.
 ---------------------------------------------------
 Optional flags to pass into the Environment:
 
-  CONFIG=ci, ft, uat or rc (defaults to 'ci')
-  BROWSER=firefox, chrome or ie (defaults to 'ci')
+  CONFIG=staging, dev, or live (defaults to 'dev')
+  BROWSER=firefox, chrome or ie (defaults to 'firefox')
 --------------------------------------------------
 
 Example:

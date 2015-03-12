@@ -54,7 +54,7 @@ When(/^I click on the "Copy this page link" button$/) do
 end
 
 Then(/^the clipboard should contain the link of the press release$/) do
-  expect(@browser.url == Clipboard.paste).to be true
+  expect(Clipboard.paste.include?(@browser.url)).to be true
 end
 
 When(/^I click on the News link$/) do
