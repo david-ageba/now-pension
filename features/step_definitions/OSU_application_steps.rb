@@ -29,10 +29,6 @@ When(/^I click Save$/) do
   on(ApplicationPage).save
 end
 
-Then(/^the following message is diaplayed: "([^"]*)"$/) do |message|
-  expect(@browser.text.include? message).to be true
-end
-
 When(/^I click Manage applications$/) do
   on(ApplicationPage).manage_applications
 end

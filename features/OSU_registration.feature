@@ -33,7 +33,6 @@ Feature: Nowpensions User registration
     When I click Login
     Then I will be redirected to the Help Centre for Advisers
 
-    @wip
   Scenario: Payroll Bureaux registration flow
     When I click Payroll bureau registration
     Then I should see the Payroll Bureau landing page

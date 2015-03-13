@@ -10,10 +10,10 @@ Feature: Nowpensions OSU User application
     And I choose No
     Then I can save my application, or Continue
     When I click Save
-    Then the following message is diaplayed: "Form saved"
+    Then the following message is displayed: "Form saved"
     And I click Logout
 
-  Scenario: Continue an uncmpleted application as an Adviser
+  Scenario: Continue an uncompleted application as an Adviser
     Given my email inbox is empty
     And I go to nowpensions.com homepage
     And I am logged in with my "Adviser" account
@@ -49,10 +49,11 @@ Feature: Nowpensions OSU User application
     And I go to nowpensions.com homepage
     And I am logged in with my "Employer" account
     When I click Start application
+    And I click on Continue button of the welcome page
     And I choose No
     Then I can save my application, or Continue
     When I click Save
-    Then the following message is diaplayed: "Form saved"
+    Then the following message is displayed: "Form saved"
     And I click Logout
 
   Scenario: Continue an uncompleted application as an Employer

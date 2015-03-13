@@ -64,12 +64,14 @@ payroll_registration_info:
   update_payroll: true
   forward_ddm: true
 
-adviser_application:
+adviser_application1:
   employer_name_legal: Employer
   employer_name_known: Employer
   staging_date: 1st February 2021
   plan_start_date_no: true
   organization_description: Public Limited Company
+
+adviser_application2:
   company_reg_number: 12345
   company_address: Address
   company_city: London

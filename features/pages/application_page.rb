@@ -65,7 +65,9 @@ class ApplicationPage
 
 
   def complete_adviser_application(data = {})
-    populate_page_with data_for(:adviser_application, data)
+    populate_page_with data_for(:adviser_application1, data)
+    accept_duplicate_app if accept_duplicate_app_element.visible?
+    populate_page_with data_for(:adviser_application2, data)
   end
 
   def complete_employer_application
