@@ -39,7 +39,8 @@ class RegistrationPage
   element :step_three_completed, :section, xpath: "//section[@class='journey__step journey__step--three journey__step--active journey__step--check']"
   link :login_button, css: "section.journey__step--two a"
   link :payroll_register_button, text: "Register"
-  button :confirm_yes, css: "div#ae-comms-no-modal button.confirm-yes"
+  button :confirm_yes, css: "div#ae-comms-yes-modal button.confirm-yes"
+  radio_button :bureau_ae_com, id: "osubureau-perform-ae-comms-bureau"
 
   def complete_registration_info(user_role, data = {})
     case user_role

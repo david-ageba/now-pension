@@ -58,11 +58,12 @@ payroll_registration_info:
   payroll_city: London
   postcode: NW1 2FD
   payroll_software: Accentra
-  setup_on_microsite: true
-  perform_ae_assessment: true
-  er_data_to_microsite: true
-  update_payroll: true
-  forward_ddm: true
+  bureau_ae_com: true
+#  setup_on_microsite: true
+#  perform_ae_assessment: true
+#  er_data_to_microsite: true
+#  update_payroll: true
+#  forward_ddm: true
 
 adviser_application1:
   employer_name_legal: Employer
