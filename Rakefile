@@ -17,7 +17,7 @@ end
 desc "Runs all features and outputs to HTML and rerun.txt"
 Cucumber::Rake::Task.new(:all, "Output an HTML report and rerun.txt file to reports/") do |t|
   t.profile = 'default'
-  t.cucumber_opts = '--format pretty --format html --out results/test_report.html --format json --out results/json_report.json -f rerun --out results/rerun.txt'
+  t.cucumber_opts = '-c --format pretty --format html --out results/test_report.html --format json --out results/json_report.json -f rerun --out results/rerun.txt'
   puts "Running tests on #{ENV['CONFIG']} environment,"
   puts "using browser: #{ENV['BROWSER']}"
 end
