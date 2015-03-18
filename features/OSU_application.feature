@@ -4,6 +4,9 @@ Feature: Nowpensions OSU User application
     Given my email inbox is empty
     And I go to nowpensions.com homepage
     And I am logged in with my "Adviser" account
+    And I click Manage applications
+    And I delete all my applications
+    And I go to nowpensions.com homepage
     When I click Start a new application
     And I click on Continue button of the welcome page
     Then I am at the first step of my application
@@ -40,7 +43,7 @@ Feature: Nowpensions OSU User application
     Given I go to nowpensions.com homepage
     And I am logged in with my "Adviser" account
     When I click Manage applications
-    Then I will see my previously started application with status: "Application submitted online"
+    Then I will see my previously started application
     When I click on Delete link
     Then the following message is displayed: "Application deleted"
 

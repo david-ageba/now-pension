@@ -46,6 +46,7 @@ class ApplicationPage
   text_field :payroll_contact_email2, id: "payrolls-0-payroll_contact_email_confirm-0"
   text_field :payroll_contact_phone, id: "payrolls-0-payroll_contact_phone-0"
   text_field :payroll_software_provider, css: "fieldset#payroll_0 div:nth-child(7) input"
+  radio_button :automatic_e_laws_no, id: "payrolls-0-employee_comms-1"
 
   link :see_plan_summary, text: "See Plan Summary"
   link :download_draft_agreement, text: "Download Draft Agreement"
@@ -63,9 +64,9 @@ class ApplicationPage
   checkbox :accepted_i_apply, id: "acceptance-checkbox"
   link :accepted_final_continue, id: "final-acceptance"
 
-
   def complete_adviser_application(data = {})
     populate_page_with data_for(:adviser_application1, data)
+    sleep 2
     accept_duplicate_app if accept_duplicate_app_element.visible?
     populate_page_with data_for(:adviser_application2, data)
   end
@@ -74,11 +75,11 @@ class ApplicationPage
     self.employer_name_legal = 'Employer'
     self.employer_name_known = 'Employer'
     self.staging_date = '1st February 2021'
+    sleep 2
+    accept_duplicate_app  if accept_duplicate_app_element.visible?
     self.select_plan_start_date_no
-
     self.organization_description = 'Public Limited Company'
     self.company_reg_number = '12345'
-    accept_duplicate_app
     self.company_address = 'Address'
     self.company_city = 'London'
     self.company_postcode = 'W2 4RH'

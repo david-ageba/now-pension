@@ -69,10 +69,10 @@ adviser_application1:
   employer_name_legal: Employer
   employer_name_known: Employer
   staging_date: 1st February 2021
-  plan_start_date_no: true
-  organization_description: Public Limited Company
 
 adviser_application2:
+  plan_start_date_no: true
+  organization_description: Public Limited Company
   company_reg_number: 12345
   company_address: Address
   company_city: London
@@ -90,6 +90,7 @@ adviser_application2:
   payroll_contact_email2: jenkins+payrollcontact@experiencematter.co.uk
   payroll_contact_phone: 12345678
   payroll_software_provider: Accentra
+  automatic_e_laws_no: true
 
 employer_application:
   employer_name_legal: Employer
@@ -116,3 +117,4 @@ employer_application_paye:
   payroll_contact_email2: jenkins+payrollcontact@experiencematter.co.uk
   payroll_contact_phone: 12345678
   payroll_software_provider: Accentra
+  automatic_e_laws_no: true

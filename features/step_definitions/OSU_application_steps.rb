@@ -127,3 +127,17 @@ end
 And(/^I click on Continue button of the welcome page$/) do
   on(ApplicationPage).continue_link
 end
+
+And(/^I delete all my applications$/) do
+unless @browser.text.include?("You don't have any active applications.")
+    while on(ApplicationPage).delete_link?
+      on(ApplicationPage).delete_link
+      @browser.alert.ok
+      break if @browser.text.include?("You don't have any active applications.")
+    end
+  end
+end
+
+Then(/^I will see my previously started application$/) do
+  expect(on(ApplicationPage).active_applications_table?).to be true
+end
