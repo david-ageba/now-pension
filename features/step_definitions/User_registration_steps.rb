@@ -23,7 +23,7 @@ And(/^I click Register$/) do
 end
 
 Then(/^I should receive an email with a confirmation link in it$/) do
-  @link = (GoogleMail.get_last_mail_text_with_subject "Thanks for Registering with NOW: Pensions").split("underline;\" href=\"")[1].split("\" title=\"Start the Application\"")[0]
+  @link = (GoogleMail.get_last_mail_text_with_subject "Thanks for Registering with NOW: Pensions").split("underline;\" href=\"")[1].split("\" title=")[0]
 end
 
 When(/^I access that link$/) do
