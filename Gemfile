@@ -26,8 +26,3 @@ gem 'data_magic', '0.18'
 gem 'rubyzip', '1.1.3'
 gem 'selenium-webdriver', '2.44.0'
 gem "watir-webdriver", "~> 0.6.11"
-# gem 'slop', '3.5.0'
-# gem 'parser', '2.1.9'
-# gem 'rautomation', '0.14.1'
-# gem 'ruby-progressbar', '1.4.2'
-# gem 'xml-simple', '1.1.3'
