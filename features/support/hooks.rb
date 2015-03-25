@@ -4,6 +4,13 @@
 b = 'firefox' # default to firefox
 b = ENV['BROWSER'] unless ENV['BROWSER'].nil?
 
+if b == 'headless'
+  require 'headless'
+  @headless = Headless.new
+  @headless.start
+  b = 'firefox'
+end
+
 browser = Watir::Browser.new(b.to_sym)
 
 Before('~@headless', '~@manual') do
@@ -38,4 +45,5 @@ end
 # After all features have executed
 at_exit do
   browser.close
+  @headless.destroy if ENV['BROWSER'] == 'headless'
 end
