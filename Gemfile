@@ -1,4 +1,4 @@
-source "http://gems.github.com"
+#source "http://gems.github.com"
 source "http://rubygems.org"
 
 gem "rake", "10.3.1"
