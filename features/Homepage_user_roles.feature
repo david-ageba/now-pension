@@ -6,7 +6,7 @@ Feature: Nowpensions homepage user role set by cookie.
     Then I should see the Employer landing page
     And a cookie with Employer user role should be set in my browser
     When I click on the Help Centre link
-    Then I will be redirected to the Help Centre for Employers
+    Then I will be redirected to the Help Centre for Employer
 
   Scenario: Employee role set by cookie
     Given I go to nowpensions.com homepage
